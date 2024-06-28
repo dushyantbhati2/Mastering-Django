@@ -18,6 +18,8 @@ def make_api_request(url, all_data):
         all_data.append(data)
 
 
+
+
 @cache_page(60*15) # this makes a big difference brother without this it taking upto 30 secs to load the api after that the time is reduced try unapply this
 def market(request):
     try:
