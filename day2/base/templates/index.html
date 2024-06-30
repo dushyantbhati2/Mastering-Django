@@ -1,1 +1,26 @@
-<div> <h2>Hello</h2> </div>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Messages Example</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .alert-critical {
+            color: white;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    {% if messages %}
+        <div class="container mt-3">
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+
+    <!-- Your form and other content here -->
+</body>
+</html>
